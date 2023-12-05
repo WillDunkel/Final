@@ -14,57 +14,27 @@ struct ContentView: View {
     @State var showPassword: Bool = false
     var body: some View {
         VStack {
-            Text("Login")
+            Text("Slap Jack")
                 .bold()
                 .font(Font.custom("", size: 70))
-            
-            
             Spacer()
-            Text("Please Enter Your Key Here")
+            
                 .bold()
-            HStack{
-                Group {
-                    if showPassword {
-                        TextField("key",
-                                  text: $password,
-                                  prompt: Text("Key").foregroundColor(.black)) //change the color of the textfleid Placeholder
-                    } else {
-                        SecureField("Key", //create a secure text field
-                                    text: $password,
-                                    prompt: Text("Key").foregroundColor(.black)) // change the color of the textfeild Placeholder
-                    }
-                }
-                .padding(10)
-                .overlay {
-                    RoundedRectangle(cornerRadius: 10)
-                        .stroke(.black, lineWidth: 2) // add rounded corner to a textfiedl and change it colour
-                }
-                Button {
-                    showPassword.toggle()
-                } label: {
-                    Image(systemName: showPassword ? "eye.slash" : "eye")
-                        .foregroundColor(.black) // how to change image based in a State variable
-                }
-            }
-            Button(action: {
-                if password == "dog" {
-                } else {
-                    print("Incorrect password. Try again.")
-                }
-            }) {
-                Text("Login")
-                    .font(.headline)
-                    .foregroundColor(.white)
-                    .padding()
-                    .frame(width: 200, height: 50)
-                    .background(Color.blue)
-                    .cornerRadius(10)
-                
-                
-            }
-            Spacer()
-            Spacer()
+                .padding(3)
             
+            Button("Play"){
+                
+            }
+            NavigationLink("Game", destination: GameView())
+                .font(.headline)
+                .foregroundColor(.white)
+                .padding()
+                .frame(width: 200, height: 50)
+                .background(Color.blue)
+                .cornerRadius(10)
+                .padding()
+            Spacer()
+            Spacer()
         }
         Spacer()
         Spacer()
@@ -89,8 +59,11 @@ struct CustomTextField: View { let placeholder : String
     }
 }
 
-public struct Login {
-    
-    
-}
 
+struct GameView: View {
+    var body: some View {
+        HStack{
+            Text("hi")
+        }
+    }
+}
