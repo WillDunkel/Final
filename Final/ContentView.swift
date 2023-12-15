@@ -9,43 +9,52 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State var name: String = ""
-    @State var password: String = ""
-    @State var showPassword: Bool = false
-    @State var numOfPlayers = NumberOfPlayers()
+    
+   
+    @State private var question = ""
     var body: some View {
         NavigationView{
-            VStack {
-                Text("Slap Jack")
-                    .bold()
-                    .font(Font.custom("", size: 70))
-                Spacer()
-                    .bold()
-                    .padding(3)
-                CustomTextField(placeholder: "Number Of Players", variable: $numOfPlayers.players)
-                    .background(.blue)
-                
-                NavigationLink("Play", destination: GameView())
+            ZStack{
+                Color.blue.opacity (0.3).ignoresSafeArea ()
+                VStack {
+                    Text("Magic Eight Ball")
+                        .bold()
+                        .font(Font.custom("", size: 50))
+                    Spacer()
+                        .bold()
+                    Image("Magic 8 Ball").resizable ().frame(width: 150, height: 150)
+                        .padding(3)
+                    Spacer()
+                    Text("What is your question?").bold()
+                    TextField("Question", text: $question)
+                        .frame(width: 100, height: 30, alignment: .center)
+                    
+                    NavigationLink(
+                        destination: GameView(question: question),
+                        label: {
+                            Text("Answer ->")
+                                .font(.headline)
+                                .foregroundColor(.red)
+                                .padding()
+                                .frame(width: 150, height: 30, alignment: .center)
+                                .cornerRadius(10)
+                            
+                        }
+                    )
                     .font(.headline)
-                    .foregroundColor(.white)
+                    .foregroundColor(.blue)
                     .padding()
                     .frame(width: 200, height: 50)
-                    .background(Image("PokerTable"))
                     .cornerRadius(10)
                     .padding()
-                Spacer()
-                Spacer()
-               
+                    
+                    Spacer()
+                    Spacer()
+                    
+                    
+                }
+                
             }
-            .background(
-            Image("CardTable")
-                .resizable()
-                .scaledToFill()
-                .ignoresSafeArea()
-            )
-            Spacer()
-            Spacer()
-            Spacer()
         }
     }
 }
@@ -67,18 +76,5 @@ struct CustomTextField: View { let placeholder : String
 }
 
 
-struct GameView: View {
-    var body: some View {
-        HStack{
-            
-            Text("hi")
-            
-        }
-    }
-}
-
-public struct NumberOfPlayers {
-    var players = ""
-}
 
 

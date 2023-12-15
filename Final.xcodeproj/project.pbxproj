@@ -14,7 +14,7 @@
 		CA3C5F402B14F17100E1E2DE /* FinalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3C5F3F2B14F17100E1E2DE /* FinalTests.swift */; };
 		CA3C5F4A2B14F17100E1E2DE /* FinalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3C5F492B14F17100E1E2DE /* FinalUITests.swift */; };
 		CA3C5F4C2B14F17100E1E2DE /* FinalUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3C5F4B2B14F17100E1E2DE /* FinalUITestsLaunchTests.swift */; };
-		CA3C5F592B178D5700E1E2DE /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3C5F582B178D5700E1E2DE /* SwiftUIView.swift */; };
+		CA3C5F922B2A0BEF00E1E2DE /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3C5F912B2A0BEF00E1E2DE /* GameView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +46,7 @@
 		CA3C5F452B14F17100E1E2DE /* FinalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FinalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA3C5F492B14F17100E1E2DE /* FinalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalUITests.swift; sourceTree = "<group>"; };
 		CA3C5F4B2B14F17100E1E2DE /* FinalUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		CA3C5F582B178D5700E1E2DE /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		CA3C5F912B2A0BEF00E1E2DE /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +99,7 @@
 			children = (
 				CA3C5F2D2B14F16F00E1E2DE /* FinalApp.swift */,
 				CA3C5F2F2B14F16F00E1E2DE /* ContentView.swift */,
-				CA3C5F582B178D5700E1E2DE /* SwiftUIView.swift */,
+				CA3C5F912B2A0BEF00E1E2DE /* GameView.swift */,
 				CA3C5F312B14F17000E1E2DE /* Assets.xcassets */,
 				CA3C5F332B14F17000E1E2DE /* Final.entitlements */,
 				CA3C5F342B14F17000E1E2DE /* Preview Content */,
@@ -263,8 +263,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA3C5F302B14F16F00E1E2DE /* ContentView.swift in Sources */,
+				CA3C5F922B2A0BEF00E1E2DE /* GameView.swift in Sources */,
 				CA3C5F2E2B14F16F00E1E2DE /* FinalApp.swift in Sources */,
-				CA3C5F592B178D5700E1E2DE /* SwiftUIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
