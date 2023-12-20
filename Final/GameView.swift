@@ -18,15 +18,16 @@ struct GameView: View {
             VStack{
                 HStack{
                     Text("Question: ")
+                        .font(Font.custom("Times New Roman", size: 50))
                     Text("\(question)")
+                        .font(Font.custom("Times New Roman", size: 50))
                 }
-                        .bold()
-                        .font(Font.custom("", size: 30))
-                    Spacer()
-                        .bold()
-                
-                Image("8ball")
-                    .resizable ()
+                .bold()
+                .font(Font.custom("", size: 30))
+                Spacer()
+                    .bold()
+                Image("Magic 8 Ball")
+                    .resizable()
                     .frame (width: 150, height: 150)
                     .rotationEffect(.degrees (rotation))
                     .rotation3DEffect(.degrees (rotation), axis: (x: 1, y: 1, z: 0))
@@ -41,22 +42,27 @@ struct GameView: View {
                     }
                     .font(.title)
                     .padding(50)
-                    Text("Answer: \(response)")
+                    VStack{
+                        Text("Answer: ")
+                            .font(Font.custom("Times New Roman", size: 40))
+                            .bold()
+                        Text("\(response)")
+                            .font(Font.custom("Times New Roman", size: 40))
+                    }
                 }
                 Text("")
-                .font(.headline)
-                .foregroundColor(.blue)
-                .padding()
-                .frame(width: 200, height: 50)
-                .cornerRadius(10)
-                .padding()
+                    .font(.headline)
+                    .foregroundColor(.blue)
+                    .padding()
+                    .frame(width: 200, height: 50)
+                    .cornerRadius(10)
+                    .padding()
                 
                 Spacer()
                 Spacer()
             }
         }
     }
-    
     
     struct GameView_Previews: PreviewProvider {
         static var previews: some View {
@@ -70,7 +76,8 @@ struct GameView: View {
                 randomValue = Int.random(in: 1...6)
                 chooseRandom(times: times - 1)
             }
-        }else {
+        }
+        else {
             switch randomValue {
             case 1:
                 response = "Yes"

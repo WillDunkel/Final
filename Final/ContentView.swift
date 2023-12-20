@@ -8,27 +8,25 @@
 import SwiftUI
 
 struct ContentView: View {
-    
-    
-   
     @State private var question = ""
     var body: some View {
         NavigationView{
             ZStack{
-                Color.blue.opacity (0.3).ignoresSafeArea ()
+                Color.blue.opacity (0.3)
+                    .ignoresSafeArea()
                 VStack {
                     Text("Magic Eight Ball")
                         .bold()
-                        .font(Font.custom("", size: 50))
+                        .font(Font.custom("Times New Roman", size: 50))
                     Spacer()
                         .bold()
                     Image("Magic 8 Ball").resizable ().frame(width: 150, height: 150)
                         .padding(3)
                     Spacer()
                     Text("What is your question?").bold()
+                        .font(Font.custom("Times New Roman", size: 30))
                     TextField("Question", text: $question)
                         .frame(width: 100, height: 30, alignment: .center)
-                    
                     NavigationLink(
                         destination: GameView(question: question),
                         label: {
@@ -38,7 +36,6 @@ struct ContentView: View {
                                 .padding()
                                 .frame(width: 150, height: 30, alignment: .center)
                                 .cornerRadius(10)
-                            
                         }
                     )
                     .font(.headline)
@@ -47,13 +44,9 @@ struct ContentView: View {
                     .frame(width: 200, height: 50)
                     .cornerRadius(10)
                     .padding()
-                    
                     Spacer()
                     Spacer()
-                    
-                    
                 }
-                
             }
         }
     }
@@ -71,7 +64,6 @@ struct CustomTextField: View { let placeholder : String
         TextField(placeholder, text: variable)
             .textFieldStyle(RoundedBorderTextFieldStyle())
             .autocapitalization(.none)
-            
     }
 }
 
